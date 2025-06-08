@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erin Store - Toko Elektronik Online</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="#" class="logo">ErinStore</a>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          ☰
+        </button>
+        <a href="#" class="cart-icon">
+          🛒
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+      <nav>
+        <div class="nav-container">
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#produk">Produk</a></li>
+            <li><a href="#kategori">Kategori</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="beranda">
+        <section class="hero">
+          <h1>Selamat Datang di ErinStore</h1>
+          <p>Temukan gadget dan elektronik terbaru dengan harga terjangkau</p>
+          <a href="#produk" class="cta-button">Belanja Sekarang</a>
+        </section>
+      </section>
+
+      <section id="produk">
+        <h2>Produk Terbaru</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">🔮</div>
+            <div class="product-info">
+              <h3 class="product-name">Lampu hias</h3>
+              <p class="product-description">
+                Lampu hias adalah peranti yang dirancang untuk memberikan pencahayaan sekaligus berfungsi sebagai dekorasi ruangan, memberikan nuansa yang nyaman, menarik, dan elegan.
+              </p>
+              <div class="product-price">Rp 160.000</div>
+              <button class="add-to-cart" onclick="addToCart()">
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">📷</div>
+            <div class="product-info">
+              <h3 class="product-name">Kamera Canon</h3>
+              <p class="product-description">
+                Kamera Canon menawarkan beragam pilihan untuk berbagai jenis fotografer, mulai dari pemula hingga profesional. Dengan sistem autofokus yang canggih, kualitas gambar yang tajam, dan kemampuan merekam video 4K, kamera Canon memungkinkan Anda menangkap momen-momen berharga dengan detail yang luar biasa.
+              </p>
+              <div class="product-price">Rp 1.500.000</div>
+              <button class="add-to-cart" onclick="addToCart()">
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">🖨️</div>
+            <div class="product-info">
+              <h3 class="product-name">Printer Canon</h3>
+              <p class="product-description">
+                Printer Canon adalah pilihan yang tepat untuk siapa saja yang mencari printer dengan kualitas cetak foto yang unggul, kemudahan penggunaan, dan fitur canggih
+              </p>
+              <div class="product-price">Rp 1.989.000</div>
+              <button class="add-to-cart" onclick="addToCart()">
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+
+      <section id="kategori">
+        <h2>Kategori produk</h2>
+        <div class="categories">
+          <div class="category-card">
+            <div class="category-icon">🔮</div>
+            <h3>Lampu Hias</h3>
+            <p>Memberikan nuansa yang nyaman,menarik dan elegan</p>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">📷</div>
+            <h3>Kamera Canon</h3>
+            <p>Dengan sistem autofokus yang canggih,kualitas gambar yang tajam</p>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">🖨️</div>
+            <h3>Printer Canon</h3>
+            <p>Kualitas cetak foto yang unggul,fitur canggih</p>
+
+      <section id="tentang">
+        <h2>Tentang Kami</h2>
+        <div class="about-content">
+          <p>
+            ErinStore adalah toko elektronik online terpercaya yang menyediakan
+            berbagai gadget dan perangkat teknologi terbaru dengan kualitas
+            terjamin.
+          </p>
+          <p>
+            Kami berkomitmen untuk memberikan pengalaman berbelanja yang mudah,
+            aman, dan memuaskan dengan layanan pelanggan terbaik dan jaminan
+            produk original.
+          </p>
+          <p>
+            Dengan pengalaman lebih dari 10 tahun di industri teknologi, kami
+            telah melayani ribuan pelanggan di seluruh Indonesia dengan kepuasan
+            mencapai 98%.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ErinStore</h3>
+          <p>
+            Toko elektronik online terpercaya dengan produk berkualitas dan
+            pelayanan terbaik.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Tautan Cepat</h3>
+          <p><a href="#">Beranda</a></p>
+          <p><a href="#produk">Produk</a></p>
+          <p><a href="#kategori">Kategori</a></p>
+          <p><a href="#tentang">Tentang Kami</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Layanan</h3>
+          <p><a href="#">Bantuan</a></p>
+          <p><a href="#">Kebijakan Privasi</a></p>
+          <p><a href="#">Syarat & Ketentuan</a></p>
+          <p><a href="#">Pengembalian</a></p>
+        </div>
+        <div class="footer-section">
+          <section id="kontak">
+            <h3>Kontak</h3>
+            <p>Email: info@erinstore.com</p>
+            <p>Telepon: (021) 123-6372</p>
+            <p>WhatsApp: +62 857-2255-5302</p>
+          </section>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ErinStore. Seluruh hak cipta dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
