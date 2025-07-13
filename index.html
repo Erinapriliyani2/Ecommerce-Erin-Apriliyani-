@@ -1,167 +1,83 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Erin Store - Toko Elektronik Online</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="header-container">
-        <a href="#" class="logo">ErinStore</a>
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-          ☰
-        </button>
-        <a href="#" class="cart-icon">
-          🛒
-          <span class="cart-count">0</span>
-        </a>
-      </div>
-      <nav>
-        <div class="nav-container">
-          <ul class="nav-menu" id="navMenu">
-            <li><a href="#beranda">Beranda</a></li>
-            <li><a href="#produk">Produk</a></li>
-            <li><a href="#kategori">Kategori</a></li>
-            <li><a href="#tentang">Tentang Kami</a></li>
-            <li><a href="#kontak">Kontak</a></li>
-          </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko AprilBeuty</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Toko AprilBeuty</h1>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('produk')">Produk</a>
+        <a href="#" onclick="showSection('Kontak')">Kontak</a>
+        <a href="#" onclick="showSection('keranjang')">Keranjang <span id="cart-count">0</span></a>
+    </nav>
+</header>
+
+<section id="home" class="section active">
+    <h2>Selamat Datang di toko April Beauty</h2>
+    <p> Ayo Berbelanja Mudah, Hidup cerdas, Trend Terbaru, Harga Terbaik, atau Penuhi Kebutuhanmu, Tanpa Batas.</p>
+</section>
+
+<section id="produk" class="section">
+    <div class="produk-grid">
+        <div class="produk-item">
+            <img src="images/produk1.jpg" al="Produk 1">
+            <h3>Emina Bright Stuff Acne Prone Face Wash 50 ml</h3>
+            <p>Rp 30.900</p>
+            <button onclick="addToCart(1, 'Emina Bright stuff Acne Frone Face Wash 50ml', 30900)">Tambah ke Keranjang</button>
         </div>
-      </nav>
-    </header>
-
-    <main>
-      <section id="beranda">
-        <section class="hero">
-          <h1>Selamat Datang di ErinStore</h1>
-          <p>Temukan gadget dan elektronik terbaru dengan harga terjangkau</p>
-          <a href="#produk" class="cta-button">Belanja Sekarang</a>
-        </section>
-      </section>
-
-      <section id="produk">
-        <h2>Produk Terbaru</h2>
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-image">🔮</div>
-            <div class="product-info">
-              <h3 class="product-name">Lampu hias</h3>
-              <p class="product-description">
-                Lampu hias adalah peranti yang dirancang untuk memberikan pencahayaan sekaligus berfungsi sebagai dekorasi ruangan, memberikan nuansa yang nyaman, menarik, dan elegan.
-              </p>
-              <div class="product-price">Rp 160.000</div>
-              <button class="add-to-cart" onclick="addToCart()">
-                Tambah ke Keranjang
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-image">📷</div>
-            <div class="product-info">
-              <h3 class="product-name">Kamera Canon</h3>
-              <p class="product-description">
-                Kamera Canon menawarkan beragam pilihan untuk berbagai jenis fotografer, mulai dari pemula hingga profesional. Dengan sistem autofokus yang canggih, kualitas gambar yang tajam, dan kemampuan merekam video 4K, kamera Canon memungkinkan Anda menangkap momen-momen berharga dengan detail yang luar biasa.
-              </p>
-              <div class="product-price">Rp 1.500.000</div>
-              <button class="add-to-cart" onclick="addToCart()">
-                Tambah ke Keranjang
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-image">🖨️</div>
-            <div class="product-info">
-              <h3 class="product-name">Printer Canon</h3>
-              <p class="product-description">
-                Printer Canon adalah pilihan yang tepat untuk siapa saja yang mencari printer dengan kualitas cetak foto yang unggul, kemudahan penggunaan, dan fitur canggih
-              </p>
-              <div class="product-price">Rp 1.989.000</div>
-              <button class="add-to-cart" onclick="addToCart()">
-                Tambah ke Keranjang
-              </button>
-            </div>
-          </article>
-
-      <section id="kategori">
-        <h2>Kategori produk</h2>
-        <div class="categories">
-          <div class="category-card">
-            <div class="category-icon">🔮</div>
-            <h3>Lampu Hias</h3>
-            <p>Memberikan nuansa yang nyaman,menarik dan elegan</p>
-          </div>
-          <div class="category-card">
-            <div class="category-icon">📷</div>
-            <h3>Kamera Canon</h3>
-            <p>Dengan sistem autofokus yang canggih,kualitas gambar yang tajam</p>
-          </div>
-          <div class="category-card">
-            <div class="category-icon">🖨️</div>
-            <h3>Printer Canon</h3>
-            <p>Kualitas cetak foto yang unggul,fitur canggih</p>
-
-      <section id="tentang">
-        <h2>Tentang Kami</h2>
-        <div class="about-content">
-          <p>
-            ErinStore adalah toko elektronik online terpercaya yang menyediakan
-            berbagai gadget dan perangkat teknologi terbaru dengan kualitas
-            terjamin.
-          </p>
-          <p>
-            Kami berkomitmen untuk memberikan pengalaman berbelanja yang mudah,
-            aman, dan memuaskan dengan layanan pelanggan terbaik dan jaminan
-            produk original.
-          </p>
-          <p>
-            Dengan pengalaman lebih dari 10 tahun di industri teknologi, kami
-            telah melayani ribuan pelanggan di seluruh Indonesia dengan kepuasan
-            mencapai 98%.
-          </p>
+        <div class="produk-item">
+            <img src="images/produk2.jpg" alt="Produk 2">
+            <h3>Emina Bright Stuff Loose Powder 55gram</h3>
+            <p>Rp 2.7000</p>
+            <button onclick="addToCart(2, 'Emina Bright Stuff loose Powder 55gram', 27000)">Tambah ke Keranjang</button>
         </div>
-      </section>
-    </main>
+        <div class="produk-item">
+            <img src="images/produk3.jpg" alt="Produk 3">
+            <h3>Emina Bright Stuff Tone Up Cream 20ml</h3>
+            <p>Rp 30.800</p>
+            <button onclick="addToCart(3, 'Emina Bright Stuff Tone UP cREAM 20ML', 30800)">Tambah ke Keranjang</button>
+        </div>
+        <div class="produk-item">
+            <img src="images/produk4.jpg" alt="Produk 4">
+            <h3>Emina Moisturizing cream Brihgt Stuff</h3>
+            <p>Rp 45.000</p>
+            <button onclick="addToCart(4, 'Emina Moisturizing Cream Bright Stuff', 45000)">Tambah ke Keranjang</button>
+        </div>
+        <div class="produk-item">
+            <img src="images/produk5.jpg" alt="Produk 5">
+            <h3>Emina Bright Stuff Face Serum</h3>
+            <p>Rp 50.000</p>
+            <button onclick="addToCart(5, 'Emina Bright Stuff Face Serum', 50000)">Tambah ke Keranjang</button>
+        </div>
+    </div>
+</section>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>ErinStore</h3>
-          <p>
-            Toko elektronik online terpercaya dengan produk berkualitas dan
-            pelayanan terbaik.
-          </p>
-        </div>
-        <div class="footer-section">
-          <h3>Tautan Cepat</h3>
-          <p><a href="#">Beranda</a></p>
-          <p><a href="#produk">Produk</a></p>
-          <p><a href="#kategori">Kategori</a></p>
-          <p><a href="#tentang">Tentang Kami</a></p>
-        </div>
-        <div class="footer-section">
-          <h3>Layanan</h3>
-          <p><a href="#">Bantuan</a></p>
-          <p><a href="#">Kebijakan Privasi</a></p>
-          <p><a href="#">Syarat & Ketentuan</a></p>
-          <p><a href="#">Pengembalian</a></p>
-        </div>
-        <div class="footer-section">
-          <section id="kontak">
-            <h3>Kontak</h3>
-            <p>Email: info@erinstore.com</p>
-            <p>Telepon: (021) 123-6372</p>
-            <p>WhatsApp: +62 857-2255-5302</p>
-          </section>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 ErinStore. Seluruh hak cipta dilindungi.</p>
-      </div>
-    </footer>
+<section id="keranjang" class="section">
+    <h2>Keranjang Belanja</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">Total: <span id="cart-total">Rp 0</span></div>
+</section>
 
-    <script src="script.js"></script>
-  </body>
+<section id="kontak" class="section">
+    <h2>Kontak Kami</h2>
+    <form>
+        <input type="text" placeholder="Nama" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Pesan" required></textarea>
+        <button type="submit">Kirim</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Toko April Beuty. Email: aprilbeuty@gmail.com | WA: 0857-2255-5302</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
 </html>
